@@ -1,4 +1,4 @@
-turbo_room,106,105,5	script	Emperium Breaker	1288,{
+prontera,148,185,5	script	Emperium Breaker	1288,{
 
 // What Map will be used
 set .Map$,"job3_arch01";
@@ -84,6 +84,7 @@ for( set .@i,5; .@i > 0; set .@i,.@i - 1 ){
 	sleep2 1000;
 	}
 //mapannounce .Map$,"Hit the Emperium Now and Skills Disabled.",0,0x00FF00;
+setmapflag .Map$,mf_noskill;
 monster .Map$,29,27,"Breaker Test",1288,1,strnpcinfo(0)+"::OnBreaked";
 set .Record,0;
 sleep2 500;
@@ -122,7 +123,5 @@ OnBreaked:
 }
 	
 job3_arch01	mapflag	nocommand	50
-job3_arch01	mapflag	gvg	on
-job3_arch01	mapflag	gvg_castle
 job3_arch01	mapflag	monster_noteleport
 job3_arch01	mapflag	nosave	SavePoint
